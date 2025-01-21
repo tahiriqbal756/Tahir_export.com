@@ -99,7 +99,7 @@ async function getPairingCode(phone) {
 
 			if (!conn.authState.creds.registered) {
 				let phoneNumber = phone ? phone.replace(/[^0-9]/g, '') : '';
-				if (phoneNumber.length < 11) return reject(new Error('Enter Valid Phone Number'));
+				if (phoneNumber.length < 11) return reject(new Error('Enter your Phone Number'));
 
 				setTimeout(async () => {
 					let code = await conn.requestPairingCode(phoneNumber);
